@@ -1,0 +1,19 @@
+<!-- Homepage, list of all our books-->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1>List of all books</h1>
+
+{% for book in books %}  
+        <div>
+          <p>
+            <b>{{ book.title }}</b>, <i>{{ book.author }}</i>, {{book.genre}} <button type="button" onclick="/removebook/" method="post">remove book!</button>
+          </p>
+        </div>
+        {% endfor %}
+
+
+{% endblock %}
